@@ -1,229 +1,319 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Movie</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-$('#myInput').on('input', function() {
-var value = $(this).val().toLowerCase();
-$('.gallery >.poster').filter(function() {
-$(this).toggle($(this).find('a').attr('title').toLowerCase().indexOf(value) > -1)});});});
-</script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{user-select:none;margin:0;padding:0;box-sizing:border-box;outline:none;user-select:none;}
-body{background:#151515;}
-#xs-header{background:#000;left: 0;position: fixed;top: 0;width: 100%;z-index: 90;height: 8%;}
-.xsposter{margin:0px;position:relative;display:inline-block;overflow-x:scroll;overflow-y:hidden;}
-play{background:#000;color:#fff;padding:5px;left:0;right:0;height:2.5em;display:flex;flex-direction:row;align-items:center;justify-content:space-between;text-decoration:none;cursor:pointer;}
-.wrapper{margin:0px;max-width:1100px;}
-.wrapper nav{display:flex;justify-content:center;}
-.wrapper .items{display:flex;max-width:720px;width:100%;justify-content:space-between;overflow:auto;}
-.items span{background:#000;color:#fff;padding:7px 25px;font-size:14px;cursor:pointer;border:0px solid #ddd;transition: all 0.3s ease;}
-.items span.active{color:#fff;background:#ff0014;}
-.gallery{display: flex;flex-wrap: wrap;margin-top: 3px;}
-.gallery .poster{width: calc(100% / 3);padding:5px;}
-.gallery .poster span{display: flex;width: 100%;overflow: hidden;}
-.gallery .poster img{background:#fff;border-radius:7px;vertical-align: middle;transition: all 0.3s ease;cursor: pointer;}
-.gallery .poster.hide{display: none;}
-@keyframes animate {
-0%{transform: scale(0.5);}
-100%{transform: scale(1);}}
-@media (max-width: 1000px) {
-.gallery .poster{width: calc(100% / 6);}}
-@media (min-width: 1360px) {
-.gallery {margin-left: -10%;margin-right: -10%;}}
-@media (max-width: 800px) {
-.gallery .poster{width: calc(100% / 5);}}
-@media (max-width: 700px) {
-.wrapper nav .items{max-width: 1000px;}nav .items span{padding: 7px 15px}}
-@media (max-width: 600px) {
-.wrapper{margin: 0px auto;}
-.wrapper nav .items{overflow: auto;}
-nav .items span{margin:0px;}
-.gallery .poster{width: calc(100% / 3);}}
+<title>PlayIDTV TV</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+<script src="http://cdn.plrjs.com/player/8zr12fi47ee7d/v78uui9a0yzs.js" type="text/javascript"></script></head> 
+<body><div id="player" class="player" style="height: 100%;"></div> 
+<style>body {height: 100%;width: 100%;overflow: hidden;margin:0;padding:0;}</style> 
+<script>var player = new Playerjs({id:"player", file:[ 
+ 
+<!--{"title":"PlayIDTVDOOTV","file":"m3u8/mp4"},--> 
+ 
+{ 
+"title":"FREETV CH3", 
+"file":"https://ch3-33-web.cdn.byteark.com/live/playlist_720p/index.m3u8"}, 
+ 
+{ 
+"title":"FREETV CH5", 
+"file":"https://freelive.inwstream.com:1936/freelive-edge/5hd/playlist.m3u8"}, 
+ 
+{ 
+"title":"FREETV CH7", 
+"file":"https://freelive.inwstream.com:1936/freelive-edge/7hd/playlist.m3u8"}, 
+ 
+{ 
+"title":"FREETV MCOT", 
+"file":"https://freelive.inwstream.com:1936/freelive-edge/mcothd/playlist.m3u8"}, 
+ 
+{ 
+"title":"FREETV Thai PBS", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/thaipbs/playlist.m3u8"}, 
 
-.xaviec{background:#000;position:fixed;top:-5px;width:100%;}
-</style>
-</head>
-<body>
-<div class="xaviec">
-<play>
-<h1 style="color:#fff;font-size:14px;">PLAY<strong style="color:#ff0014;">IDTVTV-DOONUNG</strong></h1>
-<input id="myInput" type="search" placeholder="ค้นหาชื่อหนัง" size="10" style="border-radius: 6px; outline: none; border: 0px; padding: 4px 4px; font-size: 10pt;">
-</play>
-<div class="wrapper">
-<nav><div class="items">
-<span class="item active" data-name="new">หลัก</span>
-<span class="item" data-name="boo">หนังบู๊</span>
-<span class="item" data-name="new">มาใหม่</span>
-<span class="item" data-name="uk">หนังฝรั่ง</span>
-<span class="item" data-name="thai">หนังไทย</span>
-<span class="item" data-name="horror">รวมฮิต</span>
-</div></nav></div></div><br><br><br><br>
-<div class="gallery">
-<a href="https://doomovie.oneplayer.online/embed/yyff8s7/?s" title="The Matrix Resurrections">
-<div class="poster" data-name="boo"><span><img src="https://www.img02.xyz/assets/movie_poster/c/cbc36d024b51634561bd21f7e19cdd78.jpg" width="110px" height="140px"></span></a></div>
+{ 
+"title":"FREETV NBT", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/nbt/playlist.m3u8"}, 
+ 
+{ 
+"title":"FREETV CH8", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/ch8/playlist.m3u8"}, 
+ 
+{ 
+"title":"FREETV PPTVHD", 
+"file":"https://freelive.inwstream.com:1936/freelive-edge/pptvhd/playlist.m3u8"}, 
+ 
+{ 
+"title":"FREETV Thairath", 
+"file":"https://freelive.inwstream.com:1936/freelive-edge/thairahttvhd/chunks.m3u8"}, 
+ 
+{ 
+"title":"FREETV Amarin TV", 
+"file":"https://freelive.inwstream.com:1936/freelive-edge/amarinhd/playlist.m3u8"}, 
 
-<a href="https://vlp.77player.xyz/public/index.html?key=3947d0545f97603ec4a1d10a9235bbbc&b=9147139" title="INFERNAL AFFAIRS (2002) สองคนสองคม">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Infernal-Affairs-2002-%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%99%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%A1.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=097cdff9ddd3ce51ecb5f917c3dede3f&b=9147142" title="maosha">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/03/Maoshan-2021-%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%8B%E0%B8%B2%E0%B8%99.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=cf9fa18e4df8163e37f8a3543d1850d3&b=9147141" title="Million">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/Million-Dollar-Baby-2004-%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9D%E0%B8%B1%E0%B8%99-%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%A8%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B4%E0%B9%8C%E0%B8%A8%E0%B8%A3%E0%B8%B5.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=ea51f68e348023f85db737dbeafc3aec&b=9147142" title="AHouseonth">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/03/A-House-on-the-Bayou-2021.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=bb8a63d20965cd52c9442e867f2cfe75&b=9147143" title="American refugee2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/American-Refugee-2021.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=534e129b2b3106f681242a192226e453&b=9147144" title="firslove2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/First-Love-2021-%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%81%E0%B8%A3%E0%B8%81.png" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/qft8xw6/" title="home team">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Home-Team.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=ec6d6478646246e9fbfa2a93899328d0&b=9147144" title="darkworld">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Dark-World-2021-%E0%B9%80%E0%B8%81%E0%B8%A1-%E0%B8%A5%E0%B9%88%E0%B8%B2-%E0%B8%86%E0%B9%88%E0%B8%B2-%E0%B8%A3%E0%B8%AD%E0%B8%94.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=8d5adb83806dfd17f05f53106df8511b&b=9147145" title="bluebayou">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Blue-Bayou-2021.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=e41607570927d8d4d8b4ccb9c99a62cf&b=9147145" title="Apex (2021) ล่าคนอึดพลิกจักรวาล">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Apex-2021-%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%84%E0%B8%99%E0%B8%AD%E0%B8%B6%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%A5.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=beb3a5999718a22f25ce68632150e457&b=9147145" title="anne2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Anne-2021-%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%99%E0%B9%8C.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=6a2e400524e36089a4566e6be44ad6ee&b=9147146" title="escapeofshark">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Escape-of-Shark-2021-%E0%B9%82%E0%B8%84%E0%B8%95%E0%B8%A3%E0%B8%89%E0%B8%A5%E0%B8%B2%E0%B8%A1%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%87.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=c08ee5e4d702684bc207c2bd84aadc92&b=9147146" title="intrepid">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Intrepid-Hero-2021-%E0%B8%AE%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B9%88%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%8D.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=2e94ea791e0231839b6f58cffbb9b569&b=9147146" title="4special">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/4-Special-Bodyguard-2021-4-%E0%B8%9A%E0%B8%AD%E0%B8%94%E0%B8%B5%E0%B9%89%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94-%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B9%88-170x250.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=43eca65cf7438b388d452508286ffda4&b=9147147" title="fjghting">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Fighting-Life-2021-%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%89.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=196811359ce8efad13ad542bc51b2342&b=9147147" title="therescue">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/The-Rescue-2021-%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2-13-%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%96%E0%B9%89%E0%B8%B3%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%AD%E0%B8%99.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=456717bf3225e90da14d3c9a14cee08f&b=9147147" title="houseofgucci2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/House-of-Gucci-2021-%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C-%E0%B8%AD%E0%B8%AD%E0%B8%9F-%E0%B8%81%E0%B8%B8%E0%B8%8A%E0%B8%8A%E0%B8%B5%E0%B9%88.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=6efaebfb94eb9dab36d5573b6bc830db&b=9147148" title="detectivedee">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Detective-Dee-The-Sly-Red-eye-2021-%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B9%8B%E0%B8%A2-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B7%E0%B8%9A%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%AB%E0%B9%8C.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=b2451154fd22645301eafa91a146fffc&b=9147148" title="mumichtheedge">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/Munich-The-Edge-of-War-2021-%E0%B8%A1%E0%B8%B4%E0%B8%A7%E0%B8%99%E0%B8%B4%E0%B8%84-%E0%B8%9B%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%AB%E0%B8%A7%E0%B8%AA%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%A1.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=2c2b3cb9a40c1141ff83531e8beb9af3&b=9147148" title="fortree2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/Fortress-2021.jpeg" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=d7618ededc82305bca83e92e11b6ac86&b=9147149" title="looks2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/Last-Looks-2021.jpeg" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=30d53b2fbdfa3a9c979d1e64cea6d656&b=9147149" title="jekyll2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/Jekyll.and_.Hyde-2021.jpeg" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=15a976d0c9b57e60a09e680747e8cad8&b=9147149" title="eternals">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/Eternals-2021.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=31e9c1f4fa6d24b06f2604c7d91a835d&b=9147150" title="thelastdurl2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2021/12/The-Last-Duel-2021-%E0%B8%94%E0%B8%A7%E0%B8%A5%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95-%E0%B8%A5%E0%B8%B4%E0%B8%82%E0%B8%B4%E0%B8%95%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2.png" width="110px" height="140px"></span></a></div>
-<a href="https://vlp.77player.xyz/public/index.html?key=0ad586e75a5347c7bbbe094408161b27&b=9147150" title="thebeast2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/The-Beast-2021-%E0%B9%81%E0%B8%9C%E0%B9%88%E0%B8%99%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=8fd97143c3796b2985de2f3e0bc03387&b=9147150" title="amouthful">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/A-Mouthful-of-Air-2021.png" width="110px" height="140px"></span></a></div><a href="https://vlp.77player.xyz/public/index.html?key=11700210b5791b012680f78fc854a3da&b=9147151" title="deathto2021">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/01/Death-to-2021-2021.png" width="110px" height="140px"></span></a></div>										       
-<a href="https://vlp.77player.xyz/public/index.html?key=3947d0545f97603ec4a1d10a9235bbbc&b=9147139" title="INFERNAL AFFAIRS (2002) สองคนสองคม">
-<div class="poster" data-name="new"><span><img src="https://www.i-moviehd.com/wp-content/uploads/2022/02/Infernal-Affairs-2002-%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%99%E0%B8%AA%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%A1.png" width="110px" height="140px"></span></a></div><a href="https://doomovie.oneplayer.online/embed/4nVVX09/?s" title="ฮีโร่พลังเทพเจ้า">
-<div class="poster" data-name="boo"><span><img src="https://www.img02.xyz/assets/movie_poster/e/e0aa1cc746cf8fcc845e8436533639c5.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://doomovie.oneplayer.online/embed/hXcYd1u/?s" title="007">
-<div class="poster" data-name="boo"><span><img src="https://www.img02.xyz/assets/movie_poster/e/e7d325368705b3b50c0b6bedf79ea649.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://doomovie.oneplayer.online/embed/K03Bo6L/?s" title="Resident Evil: Welcome to Raccoon City [บรรยายไทย]">
-<div class="poster" data-name="boo"><span><img src="https://www.img02.xyz/assets/movie_poster/7/7c3932ce3ef7de3dd4097c0edfe97b5a.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://embed.zembed.xyz/embed/0ptladb" title="Sadak 2">
-<div class="poster" data-name="boo"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/12b5892142a528cdac76504f79ec1371-185x239.jpg?v=1.0" width="110px" height="140px"></span></a></div>
-<a href="https://embed.zembed.xyz/api/v1/data/" title="Fandango">
-<div class="poster" data-name="boo"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/Mumbai-Saga-Image-2-Fandango-183x239.jpg?v=1.0" width="110px" height="140px"></span></a></div>
-<a href="https://168hd.xyz/embed/9nz35ry/" title="Becky">
-<div class="poster" data-name="horror"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/Becky-185x239.jpg?v=1.0" width="110px" height="140px"></span></a></div>
-<a href="https://168hd.xyz/embed/zfj3nxu/" title="Occupation Rainfall สงครามวันสิ้นหวัง (2020)">
-<div class="poster" data-name="boo"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/YgjyKHDYQ5n7UbBk-185x239.jpg?v=1.0" width="110px" height="140px"></span></a></div>
-<a href="https://168hd.xyz/embed/gja1269/" title="Jay-and-Silent-Bob-Reboot">
-<div class="poster" data-name="uk"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/Jay-and-Silent-Bob-Reboot-1-scaled-e1625540124366-185x239.jpg?v=1.0" width="110px" height="140px"></span></a></div><a href="https://168hd.xyz/embed/4geowfm/" title="jolt">
-<div class="poster" data-name="boo"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/thumb_3236-185x239.jpg?v=1.0" width="110px" height="140px"></span></a></div><a href="https://168hd.xyz/embed/fvhykum/" title="Fatman แฟตแมน (2020)">
-<div class="poster" data-name="boo"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/5-10-185x239.jpg?v=1.0" width="110px" height="140px"></span></a></div><a href="https://168hd.xyz/embed/iach4bv/" title="Last-Shoot-Out">
-<div class="poster" data-name="horror"><span><img src="https://doofree4k.com/wp-content/uploads/2022/02/Last-Shoot-Out-183x239.jpg?v=1.0" width="110px" height="140px"></span></a></div><a href="https://doomovie.oneplayer.online/embed/K03Bo6L/?s" title="Resident Evil: Welcome to Raccoon City [บรรยายไทย]">
-<div class="poster" data-name="boo"><span><img src="https://www.img02.xyz/assets/movie_poster/7/7c3932ce3ef7de3dd4097c0edfe97b5a.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10974" title="DRUG HUNTER (2022) ล่าระห่ำ">
-<div class="poster" data-name="boo"><span><img src="https://movie24thai.com/wp-content/uploads/2022/02/wzuqN2lpUIHcCsBIv0wwM78k63JctGOcf06212529b707f9534b1dd9763e53ae.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10992" title="Finch (2021)">
-<div class="poster" data-name="uk"><span><img src="https://movie24thai.com/wp-content/uploads/2022/02/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94-1.jpg" width="110px" height="140px"></span></a>
-</div><a href="https://playerlnw.com/movie24thai.php?vid=M10999" title="Reminiscence (2021) เรมินิสเซนซ์ ล้วงอดีตรำลึกเวล"><div class="poster" data-name="boo"><span><img src="https://movie24thai.com/wp-content/uploads/2022/02/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94-100.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M11005" title="The Secret Weapon (2021) บุษบา">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2022/02/103563_tLmPoJBz2pf6dR7MfPLl.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M11010" title="DARK WORLD (2021) เกม ล่า ฆ่า รอด">
-<div class="poster" data-name="boo"><span><img src="https://movie24thai.com/wp-content/uploads/2022/02/e92c31ae-550e-4941-a7df-7e9a8ceefe88.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M11013" title="Kingman">
-<div class="poster" data-name="boo"><span><img src="https://movie24thai.com/wp-content/uploads/2022/02/boB4Dg36XnXJdYiWRJwu6Qa7KB7-203x300-1.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M08492" title="Lingering (Hotel Lake) โรงแรมผีจอง(เวร) (2020)">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/1-18.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M08778" title="The Curse of La Llorona (2019) คำสาปมรณะจากหญิงร่ำไห้">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/2-20.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M09855" title="RECALLED (2021)">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/4-27.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M07735" title="Serenity (2019) [Sub TH]">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/1-15.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M07806" title="MOTHERLESS BROOKLYN (2019) สืบกระตุก โค่นอิทธิพลมืด [ซับไทย]">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/2-15.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M08194" title="Gonjiam Haunted Asylum (2018) กอนเจียม สถานผีดุ">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/5-15-202x300-1.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10155" title="Thale (2012) นางไม้สีเลือด">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/5-12.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M07486" title="It chapter two">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/5-10.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M07258" title="Annabelle comes home">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/5-9.jpg" width="110px" height="140px"></span></a></div><a href="https://c1.googleserverdata.com/embed/M07223" title="curse la llorona">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/1-10.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://playerlnw.com/movie24thai.php?vid=M10148" title="Sadako is Back (2018) ซาดาโกะ กำเนิดตำนานคำสาปมรณะ">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/3-6.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10144" title="Ryde (2017) แอพพลิเคชั่น (ฆ่า)">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/4-4.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10143" title="Rust Creek (2018) หนีตายป่าเดนคน">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/3-5.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10139" title="Satanic Panic (2019) ลัทธิคลั่งเวอร์จิ้น">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/4-3-1.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10135" title="Triggered">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/1-3-2.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10132" title="SAGA Curse of the Shadow (2013) ศึกคำสาปมรณะ">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/3-2.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10130" title="Savaged (2013) ปลุกเธอมาล้างแค้น">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/1-2.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10129" title="Scare Campaign (2016) เรียลลิตี้ไล่ล่า ฆ่าทะลุจอ">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/5-1.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M10117" title="Sendero (2015) หวีดคลั่ง คนหนีตาย">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2021/08/2-27-1.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M08444" title="Pee Nak 2 พี่นาค 2 (2020)">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/08/MV5BNjBmMmRiZjgtNDNlMi00OWVmLWI0YzYtYjQ5ODc4YTUxMzhkXkEyXkFqcGdeQXVyODgwNDE1NzE@._V1_UY268_CR30182268_AL_.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M00122" title="Roommate (2009) รูมเมท เพื่อนร่วมห้อง…ต้องแอบรัก">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/08/MV5BY2QyNTUyNjMtNTJiYy00OTQxLThmZmEtYTI2ZmIyNjgzZmI4XkEyXkFqcGdeQXVyNjc1MjA0MTI@._V1_UY268_CR30182268_AL_.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M00161" title="Ong-bak (2003) องค์บาก 1">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/08/MV5BNDg4MmQyODgtM2Q4ZC00ZWI2LWJkYmMtYTQ5ZGI5NDJhN2IwXkEyXkFqcGdeQXVyNzgzODI1OTE@._V1_UX182_CR00182268_AL_.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M00162" title="Ong-bak องค์บาก 2">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/08/MV5BMjIzMjM2NDAwNF5BMl5BanBnXkFtZTcwMDU0NjU3Mg@@._V1_UX182_CR00182268_AL_.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M08276" title="Necromancer 2020 จอมขมังเวทย์ 2020 (2019)">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/07/mtOg5bUAZKjs49GAaFxe019u8mc.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M08260" title="DOK FAH MHA JAZZ (2017) ดอกฟ้า หมาแจ๊ส">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/07/Dok-Fah-Mha-Jazz-214x300-1.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M08254" title="Who ปิดป่าหลอน (2020)">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/07/Who-2020.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M08222" title="ชายกลาง เดอะมิวสิคัล Chaiklang the Musical (2019)">
-<div class="poster" data-name="horror"><span><img src="https://movie24thai.com/wp-content/uploads/2020/07/CK_10_choose_yellow_S_edits.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M08179" title="Low Season (2020) สุขสันต์วันโสด">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/06/MV5BM2NlYWZmYTAtMmUwNC00NmRlLWE2N2YtYzUwNmRmZWE4OGZhXkEyXkFqcGdeQXVyODgwNDE1NzE@._V1_SY1000_SX700_AL_.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M08162" title="bnk48">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/06/thumb_2971.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M07861 title="ล่า ล้าง บัญชี The Kill List (2020)">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/05/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94-30.jpg" width="110px" height="140px"></span></a></div><a href="https://playerlnw.com/movie24thai.php?vid=M07291" title="Bikeman (2018) ไบค์แมน ศักรินทร์ตูดหมึก">
-<div class="poster" data-name="thai"><span><img src="https://movie24thai.com/wp-content/uploads/2020/06/bikeman-scaled.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/h51uxpz/" title="Detective">
-<div class="poster" data-name="boo"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Detective-Dee-The-Sly-Red-eye.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/8bbq23n/" title="magic">
-<div class="poster" data-name="boo"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Drop-the-Magic-Tianshi.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/b5axyju/" title="looop">
-<div class="poster" data-name="horror"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Looop-Lapeta.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/b8149n7/" title="tomandjerry">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Tom-and-Jerry-Cowboy-Up.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/xprmt8f/"tpf3">
-<div class="poster" data-name="horror"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/The-Tinder-Swindler.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/lowfwkn/" title="drughunter">
-<div class="poster" data-name="horror"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Drug-Hunter.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/ggs65ii/" title="aloveyou">
-<div class="poster" data-name="thai"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/AI-Love-You.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/qft8xw6/" title="home team">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Home-Team.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/gonaubk/" title="reincarntion">
-<div class="poster" data-name="boo"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Reincarnation-Land.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/tue335r/" title="gold">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Gold.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/78wcf9m/" title="donovan1">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Ray-Donovan1.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/ou6ck84/" title="taichi">
-<div class="poster" data-name="boo"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/The-TaiChi-Master.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/by2m0vq/" title="perfect strangers">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/01/Perfect-Strangers.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/9md0jot/" title="amandla">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/01/Amandla.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/pqrk3yz/" title="myfathers">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/01/My-Fathers-Violin.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/tmtlk2m/" title="jakpokochalam">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/01/Jak-pokochalam-gangstera.png" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/eq45jyz/" title="brazen">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/01/Brazen.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/yxhrwx2/" title="rucker">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/01/Rucker.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/jys40ns/" title="Harry Potter">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/01/Harry-Potter-20th-Anniversary-Return-to-Hogwarts.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/094y96v/" title="the falcon">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2021/04/The-Falcon-and-the-Winter-Soldier.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/jo4fj0z/" title="nogooddeed">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/No-Good-Deed.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/gvb5p1k/" title="beIN sports 1">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/The-Throwaways.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/g421m8f/" title="redsparrow">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Red-Sparrow.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/q5ntnxu/" title="at The devil">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/At-the-Devil-s-Door.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/eus1d8q/" title="ravenge">
-<div class="poster" data-name="horror"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Revenge.jpg" width="110px" height="140px"></span></a></div>
-<a href="https://cdn24hr.xyz/embed/6wn4em6/" title="crisonpeak">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Crimson-Peak.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/p4qmvlm/" title="house">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/House-at-the-End-of-the-Street.jpg" width="110px" height="140px"></span></a></div><a href="https://cdn24hr.xyz/embed/l1mha7u/" title="three king">
-<div class="poster" data-name="uk"><span><img src="https://i-watchhd.com/wp-content/uploads/2022/02/Three-Kings.jpg" width="110px" height="140px"></span></a></div>										       <br>
-<script>
-const filterItem = document.querySelector(".items");
-const filterImg = document.querySelectorAll(".gallery .poster");
-window.onload = ()=>{ 
-filterItem.onclick = (selectedItem)=>{ 
-if(selectedItem.target.classList.contains("item")){ 
-filterItem.querySelector(".active").classList.remove("active"); 
-selectedItem.target.classList.add("active"); 
-let filterName = selectedItem.target.getAttribute("data-name"); 
-filterImg.forEach((image) => {
-let filterImges = image.getAttribute("data-name"); 
-if((filterImges == filterName) || (filterName == "all")){
-image.classList.remove("hide"); 
-image.classList.add("show"); }
-else{image.classList.add("hide"); image.classList.remove("show"); }});}}
-for (let i = 0; i < filterImg.length; i++) {
-filterImg[i].setAttribute("onclick", "preview(this)"); }}
-</script>
-</body>
-</html>
+{ 
+"title":"FREETV Workpoint", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/workpointtv/playlist.m3u8"}, 
+ 
+{ 
+"title":"FREETV One31", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/onehd/chunks.m3u8"}, 
+ 
+{ 
+"title":"FREETV GMM25", 
+"file":"https://freelive2.inwstream.com/freelive-edge/gmmchannel/chunks.m3u8"}, 
+ 
+{ 
+"title":"FREETV TNN24", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/tnn24/chunks.m3u8"}, 
+ 
+{ 
+"title":"FREETV Top News", 
+"file":"https://live.topnews.co.th/hls/topnews_a_720.m3u8"}, 
+
+{ 
+"title":"FREETV Mono29", 
+"file":"https://mediasv.online/stream_live/029_MONO/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgNDowOTo0MiBQTSZoYXNoX3ZhbHVlPUp1SFQ4ekVSS1ZYd256WDJXdDlXSFE9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjAmaWQ9Y2hfMjg4MDk="}, 
+ 
+{ 
+"title":"FREETV True4U", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/true4u/chunks.m3u8"}, 
+ 
+{ 
+"title":"FREETV JKN18", 
+"file":"https://5f27aa1f6ef91.streamlock.net/jkncnbc/myStream/chunklist_w1477849682.m3u8"}, 
+ 
+{ 
+"title":"FREETV Nation", 
+"file":"https://freelive.inwstream.com/freelive-edge/nation/playlist.m3u8"}, 
+
+
+{ 
+"title":"GOODTV Sweet", 
+"file":"https://mediasv.online/stream_live/goodtv42_Sweet./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgNDowMDoyNCBQTSZoYXNoX3ZhbHVlPVI1bHZmWHhPTkRGc0MvNnA5TXJmUUE9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjcmaWQ9Y2hfOTM0Mzk="}, 
+ 
+{ 
+"title":"GOODTV Heart", 
+"file":"https://mediasv.online/stream_live/goodtv43_Heart./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgNDowMDo1NiBQTSZoYXNoX3ZhbHVlPTFreEQxdi9ITGxiLzlvM1o4b3UrR2c9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjcmaWQ9Y2hfNDYyMjc="}, 
+ 
+{ 
+"title":"GOODTV RealMetro", 
+"file":"https://mediasv.online/stream_live/goodtv41_RealMetro./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo1OTo0NSBQTSZoYXNoX3ZhbHVlPXgwL0JjTEk3MEpVc0JXVzh1Z2FMSlE9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MzEmaWQ9Y2hfMzI2MzA="}, 
+
+
+
+{ 
+"title":"GOODTV Hero", 
+"file":"https://mediasv.online/stream_live/goodtv44_Hero./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgNDowMTozMSBQTSZoYXNoX3ZhbHVlPTNxVjkrRU96RE5HNk1Lb3MyeUR4cXc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjYmaWQ9Y2hfMTI1ODI="}, 
+ 
+ { 
+"title":"GOODTV JUSTFUN", 
+"file":"https://mediasv.online/stream_live/goodtv39_JustFun./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo1OTowOCBQTSZoYXNoX3ZhbHVlPWw0NlprcThWdjJYS3ZFcGo3bU8zZnc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjkmaWQ9Y2hfNzExMjc="}, 
+
+{ 
+"title":"GOODTV Nextkid", 
+"file":"https://mediasv.online/stream_live/goodtv66_nextKid./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgNDowMjo1MSBQTSZoYXNoX3ZhbHVlPVdOZWNCTkpzWHRBZUZaZlIwS3pMNmc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjkmaWQ9Y2hfNzc1NjY="}, 
+
+
+{ 
+"title":"GOODTV AnimalShow", 
+"file":"https://mediasv.online/stream_live/goodtv56_AnimalShow./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo1NTo1NCBQTSZoYXNoX3ZhbHVlPUR1NnhMT2ZPV3dGYm9TYnplUkFWa3c9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MzImaWQ9Y2hfOTE2NTc="}, 
+
+{ 
+"title":"GOODTV MYSci", 
+"file":"https://mediasv.online/stream_live/goodtv58_MYSci./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgNDowMjowOSBQTSZoYXNoX3ZhbHVlPVJtbzdlNTBPOUdsL3pnNjZDVVlrUmc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjcmaWQ9Y2hfMzEyODk="}, 
+
+
+{ 
+"title":"GOODTV NEW-EXPLORER", 
+"file":"https://mediasv.online/stream_live/goodtv59_New_Explorer./playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo1ODozNCBQTSZoYXNoX3ZhbHVlPVdYSEpUVXVDUWFTbHVCMkFxSkp3bFE9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MzQmaWQ9Y2hfNTU0NDg="}, 
+ 
+{ 
+"title":"Documentary ExploreWild", 
+"file":"https://mediasv.online/stream_live/559_ExploreWild/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo0MzoxOCBQTSZoYXNoX3ZhbHVlPTl4V2FXdjAvenl3Qm1sZTVqQmZra1E9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjcmaWQ9Y2hfMjc1ODI="}, 
+ { 
+"title":"Documentary History", 
+"file":"https://mediasv.online/stream_live/556_History/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo0NjoxMiBQTSZoYXNoX3ZhbHVlPURTaUx0VmpiUUk0c09LN2FwVHJacmc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjMmaWQ9Y2hfNDYzMDU="}, 
+ 
+{ 
+"title":"Documentary H2", 
+"file":"https://mediasv.online/stream_live/557_H2/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo0Njo1MCBQTSZoYXNoX3ZhbHVlPWVZMldNQW1QZlhaME5SbkJlNjJTd3c9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MTgmaWQ9Y2hfOTE1Mzc="}, 
+ 
+ { 
+"title":"Documentary TLC", 
+"file":"https://mediasv.online/stream_live/566_TLC/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo0OTo1MiBQTSZoYXNoX3ZhbHVlPUEwWExsWngycC9EVE9MZ3lNbHRaUlE9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MTkmaWQ9Y2hfNTk1NDU="}, 
+ 
+{ 
+"title":"Documentary Outdoor", 
+"file":"https://mediasv.online/stream_live/673_OUTDOOR/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNTo1MzoxNiBQTSZoYXNoX3ZhbHVlPVJxRlZ4RVF2U2pHelNtdDRPdWhaM2c9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjMmaWQ9Y2hfNTA3MjY="}, 
+ 
+{ 
+"title":"Documentary NatGeoWildHD", 
+"file":"https://sc.id-tv.kz/NatGeoWildHD_34_35.m3u8"}, 
+ 
+ { 
+"title":"Documentary Food Network", 
+"file":"https://mediasv.online/stream_live/342_Food_Network/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8yNS8yMDIyIDk6MTQ6NDEgQU0maGFzaF92YWx1ZT1vNkowTFE3Zlg4TlpoZWpRa0NCWk53PT0mdmFsaWRtaW51dGVzPTg2NDAwMDAwJnN0cm1fbGVuPTI4JmlkPWNoXzYwMzcx"}, 
+ 
+{ 
+"title":"Documentary LoveNature", 
+"file":"https://mediasv.online/stream_live/563_Love_Nature/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo0OToyMiBQTSZoYXNoX3ZhbHVlPWR0OGgycFRjL01CaGlzYUMvY0UxK2c9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjcmaWQ9Y2hfNjY1MTU="}, 
+
+{ 
+"title":"Documentary Nationnal", 
+"file":"https://mediasv.online/stream_live/558_Nationnal_geographic/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo0ODo0NSBQTSZoYXNoX3ZhbHVlPUZBaHVsNUJXeVgxbTQ5RTh3VDA5UWc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MzYmaWQ9Y2hfODg0MTM="}, 
+ 
+{ 
+"title":"Documentary BBC Lifestyle", 
+"file":"https://mediasv.online/stream_live/353_BBC_Life_Style/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNjowNDo0MCBQTSZoYXNoX3ZhbHVlPXBNN3hRMzM4am43RGlxZGVvTVBrQ0E9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MzAmaWQ9Y2hfMTU3Nzk="}, 
+ 
+{ 
+"title":"Documentary DiscoveryAsia", 
+"file":"https://mediasv.online/stream_live/555_Discovery_Asia/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8xMC8yMDIyIDQ6MjA6MzMgQU0maGFzaF92YWx1ZT1ULzJlMEJtYlRyWkI0SkJNUUlQRlVBPT0mdmFsaWRtaW51dGVzPTg2NDAwMDAwJnN0cm1fbGVuPTMwJmlkPWNoXzE3NDM4"}, 
+ 
+{ 
+"title":"Documentary BBC EARTH", 
+"file":"hhttps://mediasv.online/stream_live/568_BBC_Earth/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo1MToxMyBQTSZoYXNoX3ZhbHVlPVhaWVhjeXM1US9pWVhQR0pCdkxDR2c9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjUmaWQ9Y2hfMTYzNDA="}, 
+ 
+{ 
+"title":"Documentary AnimalPlanet ", 
+"file":"https://mediasv.online/stream_live/567_Animal_Planet/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC84LzIwMjIgMzo1MDoxOCBQTSZoYXNoX3ZhbHVlPU5aVFR0QTBUMGU1cVMyNVQwRWJPeXc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjkmaWQ9Y2hfNzkyNTc="}, 
+
+{ 
+"title":"News News 1", 
+"file":"https://server1.streamssl.com/stream/news1_hi.m3u8"}, 
+ 
+{ 
+"title":"Sports TPF1", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tpf1_480/playlist.m3u8 "}, 
+ 
+ { 
+"title":"Sports TPF2", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tpf2/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Sports TPF3", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tpf3/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Sports TPF4", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tpf4/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Channel TPF5", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tpf5/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Sports beIN 1", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/bein1/playlist.m3u8"}, 
+ 
+{ 
+"title":"Sports beIN 3", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/bein3/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Sports Tennis", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tennis/playlist.m3u8"}, 
+ 
+ { 
+"title":"Sports nba", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/nba/playlist.m3u8 "}, 
+ 
+ { 
+"title":"Sports NFL", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/nfl/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Sports golf", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/golf/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Sports Golf 2", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/golf2/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Channel TRUESPORTHD1", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/thd1/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Channel TRUESPORTHD2", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/thd2/playlist.m3u8"}, 
+ 
+{ 
+"title":"Sports Truesporthd3", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/thd3/playlist.m3u8 "}, 
+ 
+{ 
+"title":"Sports TSP 5", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tsp5/playlist.m3u8"}, 
+ { 
+"title":"Sports TSP 7", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/tsp7/playlist.m3u8"}, 
+ 
+ { 
+"title":"Sports Motor Vision", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/motor-vision/playlist.m3u8"}, 
+ { 
+"title":"Sports Spotv", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/spotv/playlist.m3u8"}, 
+ { 
+"title":"Sports Sportv2", 
+"file":"https://r1-sn-w5nuxa-o73.googlevideocdn.com/168dooball/spotv2/playlist.m3u8"}, 
+ 
+ { 
+"title":"MOVIE Warner", 
+"file":"https://mediasv.online/stream_live/228_warner/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNTo1NTowMiBQTSZoYXNoX3ZhbHVlPUZ6bFAveGJJa3dsbFhiMk1yRngrMmc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjImaWQ9Y2hfNTY2MDk="}, 
+ 
+{ 
+"title":"Movie AXN", 
+"file":"https://mediasv.online/stream_live/336_AXN/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNjowMjoxMyBQTSZoYXNoX3ZhbHVlPXR0dzdoNHczVS9CcFlyTHM2UFRTV0E9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MTkmaWQ9Y2hfMjM5Njc="}, 
+ 
+{ 
+"title":"Movie Paramount", 
+"file":"https://mediasv.online/stream_live/232_Paramount/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNTo1NTo1NyBQTSZoYXNoX3ZhbHVlPVJOeTZ6dDhkRmo3SUNlVnpGN1AyS0E9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjUmaWQ9Y2hfNjE4NTY="}, 
+ 
+{ 
+"title":"Movie CINEMAX", 
+"file":"https://mediasv.online/stream_live/3BB_CINEMAX/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNjowNzoxNyBQTSZoYXNoX3ZhbHVlPTF2UXRBWG01ZUhkR2FhOVBEMGFoTkE9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjMmaWQ9Y2hfMTE0ODI="}, 
+ 
+{ 
+"title":"Movie HBO", 
+"file":"https://mediasv.online/stream_live/3BB_HBO/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNjowNzo1MyBQTSZoYXNoX3ZhbHVlPVcvMHdySVhDdzJFYUVxRFo2Q1FVb0E9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MTkmaWQ9Y2hfNTY5Njg="}, 
+
+{ 
+"title":"Movie FWSOV", 
+"file":"https://freelive2.inwstream.com:1936/freelive-edge/fwsov_fw-iptv.stream/playlist.m3u8"}, 
+ 
+{ 
+"title":"Movie KBS", 
+"file":"https://mediasv.online/stream_live/245_KBS/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8yNS8yMDIyIDg6NTE6MzcgQU0maGFzaF92YWx1ZT10Y3prd2FWdU4zbS93UUUzSFc1bm9nPT0mdmFsaWRtaW51dGVzPTg2NDAwMDAwJnN0cm1fbGVuPTE5JmlkPWNoXzkyNzM5"}, 
+ 
+{ 
+"title":"Movie Hit", 
+"file":"https://mediasv.online/stream_live/224_MovieHit/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNTo1MDoyMCBQTSZoYXNoX3ZhbHVlPVNDY2g2cUtjUVIra3k5TFRUQWRXK2c9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjQmaWQ9Y2hfMjUzMzk="}, 
+ 
+{ 
+"title":"Movie Film", 
+"file":"https://mediasv.online/stream_live/222_True_Film_HD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8yNS8yMDIyIDg6NDk6MjEgQU0maGFzaF92YWx1ZT1CY3diS3U5c0w1UkN3TEFCeWVLNEZBPT0mdmFsaWRtaW51dGVzPTg2NDAwMDAwJnN0cm1fbGVuPTI4JmlkPWNoXzkxNzkz"}, 
+ 
+{ 
+"title":"Movie True Asia", 
+"file":"https://mediasv.online/stream_live/237_TrueFilmAsia/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNTo1ODozOCBQTSZoYXNoX3ZhbHVlPW42ZzhpM0p3OTVEbU1nNW1vU1ZOdHc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjgmaWQ9Y2hfNDEyODc="}, 
+
+{ 
+"title":"Movie ASIANMORE", 
+"file":"https://mediasv.online/stream_live/239_AsianMore/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNTo1OToxMSBQTSZoYXNoX3ZhbHVlPXloWGswNktIa2FtZnVLS050NERpMXc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjUmaWQ9Y2hfNjc3MjU="}, 
+ 
+{ 
+"title":"Movie Film hd", 
+"file":"https://mediasv.online/stream_live/222_True_Film_HD/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNTo1Nzo1MiBQTSZoYXNoX3ZhbHVlPWhzdTcwbTBLVXk2cjI0RTdPVWlJd0E9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjgmaWQ9Y2hfNTE1Njg="}, 
+ 
+
+ 
+{ 
+"title":"Movie KMTV", 
+"file":"https://mediasv.online/stream_live/347_KMTV/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8yNS8yMDIyIDk6MTk6MjkgQU0maGFzaF92YWx1ZT1pVXhJMGZEeXZCMkJaTDZ5dmNSd1V3PT0mdmFsaWRtaW51dGVzPTg2NDAwMDAwJnN0cm1fbGVuPTIwJmlkPWNoXzgzMzE5"}, 
+ 
+ { 
+"title":"entertainment XZYTE", 
+"file":"https://mediasv.online/stream_live/340_Xzyte/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC85LzIwMjIgNjowMzozMSBQTSZoYXNoX3ZhbHVlPURzSmtMcjFuYVYycEIyY0IvbXk2cmc9PSZ2YWxpZG1pbnV0ZXM9ODY0MDAwMDAmc3RybV9sZW49MjEmaWQ9Y2hfNDE5OTk="}, 
+ 
+]}); </script>
